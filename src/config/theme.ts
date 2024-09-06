@@ -2,6 +2,220 @@ import { toMerged } from 'es-toolkit'
 
 import type { Theme } from '@/types'
 
+const cleanTheme: Theme = {
+  base: {
+    '--md-primary-color': `#000000`,
+    'text-align': `left`,
+    'line-height': `2`,
+  },
+  block: {
+    // 一级标题
+    h1: {
+      'font-size': `1.6em`,
+      'font-weight': `700`,
+      'color': `var(--md-primary-color)`,
+      'margin': `1.2em 0 0.5em`,
+      'text-shadow': `2px 2px 4px rgba(0,0,0,0.1)`,
+    },
+
+    // 二级标题
+    h2: {
+      'font-size': `1.5em`,
+      'color': `var(--md-primary-color)`,
+      'font-weight': `700`,
+      'margin': `1.2em auto 0.5em`,
+      'text-shadow': `2px 2px 4px rgba(0,0,0,0.1)`,
+    },
+
+    // 三级标题
+    h3: {
+      'padding-left': `8px`,
+      'border-left': `3px solid var(--md-primary-color)`,
+      'margin': `1.2em auto 0.75em`,
+      'color': `var(--el-text-color-regular)`,
+      'font-size': `1.3em`,
+      'font-weight': `700`,
+      'line-height': `1.2`,
+    },
+
+    // 四级标题
+    h4: {
+      'padding-left': `8px`,
+      'border-left': `3px solid var(--md-primary-color)`,
+      'margin': `1.2em auto 0.5em`,
+      'color': `var(--el-text-color-regular)`,
+      'font-size': `1.2em`,
+      'font-weight': `700`,
+    },
+
+    // 段落
+    p: {
+      margin: `1em auto 1em`,
+      color: `var(--el-text-color-regular)`,
+      // 'letter-spacing': `0.1em`,
+      // 'text-align': `justify`,
+    },
+
+    // 引用
+    blockquote: {
+      'font-style': `normal`,
+      // 'border-left': `none`,
+      'border-left': `6px solid var(--md-primary-color)`,
+      'padding': `1em`,
+      'border-radius': `2px`,
+      'color': `rgba(0,0,0,0.5)`,
+      'background': `#f7f7f7`,
+      'margin': `1.5em 2px`,
+    },
+
+    // 引用内容
+    blockquote_p: {
+      'display': `block`,
+      'font-size': `1em`,
+      'letter-spacing': `0.1em`,
+      'color': `rgb(80, 80, 80)`,
+    },
+
+    // 代码块
+    code_pre: {
+      'font-size': `13px`,
+      'overflow-x': `auto`,
+      'border-radius': `4px`,
+      'padding': `0.5em`,
+      'line-height': `1.5`,
+      'margin': `10px 2px`,
+      'box-shadow': `inset 0 0 10px rgba(0,0,0,0.05)`,
+    },
+
+    // 行内代码
+    code: {
+      'margin': 0,
+      'white-space': `nowrap`,
+      'font-family': `Menlo, Operator Mono, Consolas, Monaco, monospace`,
+    },
+
+    // 图片
+    image: {
+      'display': `block`,
+      'width': `100% !important`,
+      'margin': `0.1em auto 0.5em`,
+      'border-radius': `4px`,
+      'box-shadow': `0 4px 8px rgba(0,0,0,0.1)`,
+    },
+
+    // 有序列表
+    ol: {
+      'list-style-type': `decimal`,
+      'padding-left': `1.5em`,
+      'margin-left': `0`,
+      'color': `var(--el-text-color-regular)`,
+    },
+
+    // 无序列表
+    ul: {
+      'list-style-type': `square`,
+      'padding-left': `1.5em`,
+      'margin-left': `0`,
+      'color': `var(--el-text-color-regular)`,
+    },
+
+    footnotes: {
+      'margin': `0.5em 2px`,
+      'font-size': `80%`,
+      'color': `var(--el-text-color-regular)`,
+    },
+
+    figure: {
+      margin: `0.1em 2px`,
+      color: `var(--el-text-color-regular)`,
+    },
+
+    hr: {
+      'border-style': `solid`,
+      'border-width': `1px 0 0`,
+      'border-color': `rgba(0,0,0,0.1)`,
+      '-webkit-transform-origin': `0 0`,
+      '-webkit-transform': `scale(1, 0.5)`,
+      'transform-origin': `0 0`,
+      'transform': `scale(1, 0.5)`,
+    },
+  },
+  inline: {
+    listitem: {
+      // 'text-indent': `-1em`,
+      display: `list-item`,
+      // 'margin': `0.2em 2px`,
+      color: `var(--el-text-color-regular)`,
+    },
+
+    codespan: {
+      // 'font-size': `95%`,
+      // 'color': `#d14`,
+      'background': `rgba(27,31,35,.05)`,
+      'padding': `3px 4px`,
+      'border-radius': `2px`,
+      'font-weight': `500`,
+      // 'word-break': `break-all`,
+    },
+
+    em: {
+      'font-style': `italic`,
+      'font-size': `inherit`,
+    },
+
+    link: {
+      color: `#576b95`,
+    },
+
+    wx_link: {
+      'color': `#576b95`,
+      'text-decoration': `none`,
+    },
+
+    // 字体加粗样式
+    strong: {
+      'color': `var(--md-primary-color)`,
+      'font-weight': `bold`,
+      'font-size': `inherit`,
+    },
+
+    table: {
+      'border-collapse': `collapse`,
+      'text-align': `center`,
+      // 'margin': `1em 2px`,
+      'color': `var(--el-text-color-regular)`,
+      'display': `table`,
+      'width': `100%`,
+      'overflow': `auto`,
+      'word-break': `keep-all`,
+    },
+
+    thead: {
+      'background': `rgba(0, 0, 0, 0.05)`,
+      'font-weight': `bold`,
+      'color': `var(--el-text-color-regular)`,
+    },
+
+    td: {
+      'border': `1px solid #dfdfdf`,
+      'padding': `0.25em 0.5em`,
+      'color': `#3f3f3f`,
+      'word-break': `keep-all`,
+    },
+
+    footnote: {
+      'font-size': `12px`,
+      'color': `var(--el-text-color-regular)`,
+    },
+
+    figcaption: {
+      'text-align': `center`,
+      'color': `#888`,
+      'font-size': `0.8em`,
+    },
+  },
+}
+
 const defaultTheme: Theme = {
   base: {
     '--md-primary-color': `#000000`,
@@ -63,7 +277,6 @@ const defaultTheme: Theme = {
     // 引用
     blockquote: {
       'font-style': `normal`,
-      'border-left': `none`,
       'padding': `1em`,
       'border-radius': `8px`,
       'color': `rgba(0,0,0,0.5)`,
@@ -344,6 +557,11 @@ const graceTheme = toMerged(defaultTheme, {
 
 export const themeOptions = [
   {
+    label: `简洁`,
+    value: `clean`,
+    desc: ``,
+  },
+  {
     label: `经典`,
     value: `default`,
     desc: ``,
@@ -356,6 +574,7 @@ export const themeOptions = [
 ]
 
 export const themeMap = {
+  clean: cleanTheme,
   default: defaultTheme,
   grace: graceTheme,
 }

@@ -35,9 +35,9 @@ export const useStore = defineStore(`store`, () => {
   // 文本字体
   const fontFamily = useStorage(`fonts`, fontFamilyOptions[0].value)
   // 文本大小
-  const fontSize = useStorage(`size`, fontSizeOptions[2].value)
+  const fontSize = useStorage(`size`, fontSizeOptions[3].value)
   // 文本颜色
-  const fontColor = useStorage(`color`, colorOptions[0].value)
+  const fontColor = useStorage(`color`, colorOptions[2].value)
   // 代码块主题
   const codeBlockTheme = useStorage(`codeBlockTheme`, codeBlockThemeOptions[23].value)
   // 图注格式

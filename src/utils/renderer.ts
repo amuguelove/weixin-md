@@ -90,8 +90,8 @@ export function initRenderer(opts: IOpts) {
   let footnoteIndex: number = 0
   let styleMapping: ThemeStyles = buildTheme(opts)
   let codeIndex: number = 0
-  let listIndex: number = 0
-  let isOrdered: boolean = false
+  // let listIndex: number = 0
+  // let isOrdered: boolean = false
 
   function styles(tag: string, addition: string = ``): string {
     return getStyles(styleMapping, tag, addition)
@@ -179,7 +179,8 @@ export function initRenderer(opts: IOpts) {
     },
 
     listitem(item: Tokens.ListItem): string {
-      const prefix = isOrdered ? `${listIndex + 1}. ` : `• `
+      // const prefix = isOrdered ? `${listIndex + 1}. ` : `• `
+      const prefix = ``
       const content = item.tokens.map(t => (this[t.type as keyof Renderer] as <T>(token: T) => string)(t)).join(``)
       return styledContent(`listitem`, `${prefix}${content}`, `li`)
     },
@@ -187,8 +188,8 @@ export function initRenderer(opts: IOpts) {
     list({ ordered, items }: Tokens.List): string {
       const listItems = []
       for (let i = 0; i < items.length; i++) {
-        isOrdered = ordered
-        listIndex = i
+        // isOrdered = ordered
+        // listIndex = i
         const item = items[i]
         listItems.push(this.listitem(item))
       }
@@ -239,7 +240,8 @@ export function initRenderer(opts: IOpts) {
         .join(``)
       return `
         <section style="padding:0 8px; max-width: 100%; overflow: auto">
-          <table class="preview-table">
+<!--          <table class="preview-table">-->
+          <table ${styles(`table`)}>
             <thead ${styles(`thead`)}>${headerRow}</thead>
             <tbody>${body}</tbody>
           </table>
