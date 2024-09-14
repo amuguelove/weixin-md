@@ -14,8 +14,7 @@ const cleanTheme: Theme = {
       'font-size': `1.6em`,
       'font-weight': `700`,
       'color': `var(--md-primary-color)`,
-      'margin': `1.2em 0 0.5em`,
-      'text-shadow': `2px 2px 4px rgba(0,0,0,0.1)`,
+      'margin': `1.2em 0 0.75em`,
     },
 
     // 二级标题
@@ -23,8 +22,7 @@ const cleanTheme: Theme = {
       'font-size': `1.5em`,
       'color': `var(--md-primary-color)`,
       'font-weight': `700`,
-      'margin': `1.2em auto 0.5em`,
-      'text-shadow': `2px 2px 4px rgba(0,0,0,0.1)`,
+      'margin': `1.2em auto 0.75em`,
     },
 
     // 三级标题
@@ -42,7 +40,7 @@ const cleanTheme: Theme = {
     h4: {
       'padding-left': `8px`,
       'border-left': `3px solid var(--md-primary-color)`,
-      'margin': `1.2em auto 0.5em`,
+      'margin': `1.2em auto 0.75em`,
       'color': `var(--el-text-color-regular)`,
       'font-size': `1.2em`,
       'font-weight': `700`,
@@ -65,7 +63,7 @@ const cleanTheme: Theme = {
       'border-radius': `2px`,
       'color': `rgba(0,0,0,0.5)`,
       'background': `#f7f7f7`,
-      'margin': `1.5em 2px`,
+      'margin': `1em 2px`,
     },
 
     // 引用内容
@@ -98,7 +96,7 @@ const cleanTheme: Theme = {
     image: {
       'display': `block`,
       'width': `100% !important`,
-      'margin': `0.1em auto 0.5em`,
+      'margin': `0.1em auto 0.75em`,
       'border-radius': `4px`,
       'box-shadow': `0 4px 8px rgba(0,0,0,0.1)`,
     },
@@ -204,7 +202,7 @@ const cleanTheme: Theme = {
     },
 
     footnote: {
-      'font-size': `12px`,
+      'font-size': `14px`,
       'color': `var(--el-text-color-regular)`,
     },
 
