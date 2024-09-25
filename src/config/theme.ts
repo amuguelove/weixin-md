@@ -108,6 +108,7 @@ const cleanTheme: Theme = {
 
     // 有序列表
     ol: {
+      'margin': `15px 0 15px`,
       'list-style-type': `decimal`,
       'padding-left': `1.5em`,
       'margin-left': `0`,
@@ -116,6 +117,7 @@ const cleanTheme: Theme = {
 
     // 无序列表
     ul: {
+      'margin': `15px 0 15px`,
       'list-style-type': `square`,
       'padding-left': `1.5em`,
       'margin-left': `0`,
