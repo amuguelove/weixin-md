@@ -15,6 +15,7 @@ const cleanTheme: Theme = {
       'color': `var(--md-primary-color)`,
       'font-size': `1.5em`,
       'font-weight': `700`,
+      'line-height': `1.35`,
       'font-family': `'Menlo','Monaco','Source Code Pro','Consolas','Inconsolata','Ubuntu Mono','DejaVu Sans Mono','Courier New','Droid Sans Mono','Hiragino Sans GB','微软雅黑',monospace !important`,
     },
 
@@ -24,6 +25,7 @@ const cleanTheme: Theme = {
       'color': `var(--md-primary-color)`,
       'font-size': `1.4em`,
       'font-weight': `700`,
+      'line-height': `1.35`,
       'font-family': `'Menlo','Monaco','Source Code Pro','Consolas','Inconsolata','Ubuntu Mono','DejaVu Sans Mono','Courier New','Droid Sans Mono','Hiragino Sans GB','微软雅黑',monospace !important`,
     },
 
@@ -35,6 +37,7 @@ const cleanTheme: Theme = {
       'color': `var(--md-primary-color)`,
       'font-size': `1.3em`,
       'font-weight': `700`,
+      'line-height': `1.35`,
       'font-family': `'Menlo','Monaco','Source Code Pro','Consolas','Inconsolata','Ubuntu Mono','DejaVu Sans Mono','Courier New','Droid Sans Mono','Hiragino Sans GB','微软雅黑',monospace !important`,
     },
 
@@ -46,6 +49,7 @@ const cleanTheme: Theme = {
       'color': `var(--el-text-color-regular)`,
       'font-size': `1.2em`,
       'font-weight': `700`,
+      'line-height': `1.35`,
       'font-family': `'Menlo','Monaco','Source Code Pro','Consolas','Inconsolata','Ubuntu Mono','DejaVu Sans Mono','Courier New','Droid Sans Mono','Hiragino Sans GB','微软雅黑',monospace !important`,
     },
 
