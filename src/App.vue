@@ -82,4 +82,8 @@ body {
 .el-icon.el-color-picker__icon.is-icon-arrow-down {
   position: absolute;
 }
+
+:first-child {
+  margin-top: 0 !important;
+}
 </style>

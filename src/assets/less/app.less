@@ -7,9 +7,16 @@
 html,
 body {
   height: 100%;
-  //font-family: 'PingFang SC', BlinkMacSystemFont, Roboto, 'Helvetica Neue',
-  //  sans-serif;
-  font-family: "PingFang SC","mp-quote",-apple-system-font,BlinkMacSystemFont,"Helvetica Neue","Hiragino Sans GB","Microsoft YaHei UI","Microsoft YaHei",Arial,sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "mp-quote",-apple-system-font,BlinkMacSystemFont,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei UI","Microsoft YaHei",Arial,sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+  color: #50616D;
+}
+
+:first-child {
+  margin-top: 0;
 }
 
 input,
@@ -25,6 +32,7 @@ h4,
 h5,
 h6 {
   font-weight: 700;
+  font-family: 'Menlo','Monaco','Source Code Pro','Consolas','Inconsolata','Ubuntu Mono','DejaVu Sans Mono','Courier New','Droid Sans Mono','Hiragino Sans GB','微软雅黑',monospace !important;
 }
 
 em {
@@ -35,6 +43,9 @@ section {
   height: 100%;
 }
 
+section p:first-of-type {
+  margin-top: 0;
+}
 
 .el-message__icon {
   display: none;
@@ -67,23 +78,9 @@ section {
 }
 
 .preview-wrapper {
-  //display: flex;
-  //align-items: center;
-  //justify-content: center;
-  //padding: 1rem;
-  //width: 800px;
-  //overflow-y: scroll;
-  //
-  //box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
-
-  position: absolute;
-  width: 50%;
-  left: 50%;
-  right: 0;
-  bottom: 0;
-  resize: none;
-  z-index: 1;
-  //background: #EEE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
   overflow-y: scroll;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
@@ -96,12 +93,8 @@ section {
 
 .preview {
   position: relative;
-  //margin: 0 -20px;
-  //margin: 20px auto;
-  width: 800px;
-  //padding: 20px;
-  padding: 1em;
-  //font-size: 14px;
+  width: 480px;
+  padding: 20px;
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
@@ -138,8 +131,4 @@ mark {
   border-bottom: 1px solid #ffedce;
   padding: 2px;
   margin: 0 5px;
-}
-
-:first-child {
-  margin-top: 0;
 }

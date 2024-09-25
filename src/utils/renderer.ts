@@ -98,7 +98,7 @@ export function initRenderer(opts: IOpts) {
   }
 
   function styledContent(styleLabel: string, content: string, tagName?: string): string {
-    if (!content) {
+    if (!content && styleLabel !== `td`) {
       return ``
     }
     const tag = tagName ?? styleLabel
@@ -199,9 +199,10 @@ export function initRenderer(opts: IOpts) {
 
     image({ href, title, text }: Tokens.Image): string {
       const subText = styledContent(`figcaption`, transform(opts.legend, text, title))
-      const figureStyles = styles(`figure`)
+      // const figureStyles = styles(`figure`)
       const imgStyles = styles(`image`)
-      return `<figure ${figureStyles}><img ${imgStyles} src="${href}" title="${title}" alt="${text}"/>${subText}</figure>`
+      // return `<figure ${figureStyles}><img ${imgStyles} src="${href}" title="${title}" alt="${text}"/>${subText}</figure>`
+      return `<img ${imgStyles} src="${href}" title="${title}" alt="${text}"/>${subText}`
     },
 
     link({ href, title, text }: Tokens.Link): string {
@@ -239,7 +240,7 @@ export function initRenderer(opts: IOpts) {
         })
         .join(``)
       return `
-        <section style="padding:0 8px; max-width: 100%; overflow: auto">
+        <section style="padding:0 2px; max-width: 100%; overflow: auto">
 <!--          <table class="preview-table">-->
           <table ${styles(`table`)}>
             <thead ${styles(`thead`)}>${headerRow}</thead>

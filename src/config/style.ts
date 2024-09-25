@@ -3,7 +3,7 @@ import type { IConfigOption } from '@/types'
 export const fontFamilyOptions: IConfigOption[] = [
   {
     label: `无衬线`,
-    value: `PingFang SC, -apple-system-font,BlinkMacSystemFont, Helvetica Neue, Hiragino Sans GB , Microsoft YaHei UI , Microsoft YaHei ,Arial,sans-serif`,
+    value: `mp-quote, -apple-system-font, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei UI', 'Microsoft YaHei', Arial, sans-serif`,
     desc: `字体123Abc`,
   },
   {

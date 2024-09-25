@@ -6,72 +6,83 @@ const cleanTheme: Theme = {
   base: {
     '--md-primary-color': `#000000`,
     'text-align': `left`,
-    'line-height': `2`,
+    'line-height': `1.35`,
   },
   block: {
     // 一级标题
     h1: {
-      'font-size': `1.6em`,
-      'font-weight': `700`,
+      // 'margin': `1.2em auto 0.75em`,
+      'margin-top': `2rem`,
+      'margin-bottom': `0.5rem`,
       'color': `var(--md-primary-color)`,
-      'margin': `1.2em 0 0.75em`,
+      'font-size': `1.5em`,
+      'font-weight': `700`,
+      'font-family': `'Menlo','Monaco','Source Code Pro','Consolas','Inconsolata','Ubuntu Mono','DejaVu Sans Mono','Courier New','Droid Sans Mono','Hiragino Sans GB','微软雅黑',monospace !important`,
     },
 
     // 二级标题
     h2: {
-      'font-size': `1.5em`,
+      // 'margin': `1.2em auto 0.75em`,
+      'margin-top': `2rem`,
+      'margin-bottom': `0.5rem`,
       'color': `var(--md-primary-color)`,
+      'font-size': `1.4em`,
       'font-weight': `700`,
-      'margin': `1.2em auto 0.75em`,
+      'font-family': `'Menlo','Monaco','Source Code Pro','Consolas','Inconsolata','Ubuntu Mono','DejaVu Sans Mono','Courier New','Droid Sans Mono','Hiragino Sans GB','微软雅黑',monospace !important`,
     },
 
     // 三级标题
     h3: {
-      'padding-left': `8px`,
-      'border-left': `3px solid var(--md-primary-color)`,
-      'margin': `1.2em auto 0.75em`,
-      'color': `var(--el-text-color-regular)`,
+      // 'padding-left': `8px`,
+      // 'border-left': `3px solid var(--md-primary-color)`,
+      // 'margin': `1.2em auto 0.5em`,
+      'margin-top': `2rem`,
+      'margin-bottom': `0.5rem`,
+      'color': `var(--md-primary-color)`,
       'font-size': `1.3em`,
       'font-weight': `700`,
-      'line-height': `1.2`,
+      'font-family': `'Menlo','Monaco','Source Code Pro','Consolas','Inconsolata','Ubuntu Mono','DejaVu Sans Mono','Courier New','Droid Sans Mono','Hiragino Sans GB','微软雅黑',monospace !important`,
     },
 
     // 四级标题
     h4: {
-      'padding-left': `8px`,
-      'border-left': `3px solid var(--md-primary-color)`,
-      'margin': `1.2em auto 0.75em`,
+      // 'padding-left': `8px`,
+      // 'border-left': `3px solid var(--md-primary-color)`,
+      // 'margin': `1.2em auto 0.5em`,
+      'margin-top': `2rem`,
+      'margin-bottom': `0.5rem`,
       'color': `var(--el-text-color-regular)`,
       'font-size': `1.2em`,
       'font-weight': `700`,
+      'font-family': `'Menlo','Monaco','Source Code Pro','Consolas','Inconsolata','Ubuntu Mono','DejaVu Sans Mono','Courier New','Droid Sans Mono','Hiragino Sans GB','微软雅黑',monospace !important`,
     },
 
     // 段落
     p: {
-      margin: `1em auto 1em`,
-      color: `var(--el-text-color-regular)`,
-      // 'letter-spacing': `0.1em`,
-      // 'text-align': `justify`,
+      'margin': `15px 0 15px`,
+      'color': `var(--el-text-color-regular)`,
+      'white-space': `pre-line`,
+      'line-height': `30px`,
     },
 
     // 引用
     blockquote: {
-      'font-style': `normal`,
-      // 'border-left': `none`,
-      'border-left': `6px solid var(--md-primary-color)`,
-      'padding': `1em`,
-      'border-radius': `2px`,
-      'color': `rgba(0,0,0,0.5)`,
-      'background': `#f7f7f7`,
+      'padding': `15px 1rem`,
+      'font-size': `14px`,
+      'line-height': `18px`,
+      'color': `#819198`,
+      'border-left': `6px solid #607d8b`,
+      'background': `#f2f7fb`,
       'margin': `1em 2px`,
     },
 
     // 引用内容
     blockquote_p: {
-      'display': `block`,
-      'font-size': `1em`,
-      'letter-spacing': `0.1em`,
-      'color': `rgb(80, 80, 80)`,
+      // 'display': `block`,
+      'color': `rgb(16, 12, 12)`,
+      'font-size': `14px`,
+      'white-space': `pre-line`,
+      'line-height': `30px`,
     },
 
     // 代码块
@@ -94,11 +105,9 @@ const cleanTheme: Theme = {
 
     // 图片
     image: {
-      'display': `block`,
-      'width': `100% !important`,
-      'margin': `0.1em auto 0.75em`,
-      'border-radius': `4px`,
-      'box-shadow': `0 4px 8px rgba(0,0,0,0.1)`,
+      'border-radius': `6px`,
+      'border': `2px solid #EEE`,
+      'max-width': `100% !important`,
     },
 
     // 有序列表
@@ -124,7 +133,7 @@ const cleanTheme: Theme = {
     },
 
     figure: {
-      margin: `0.1em 2px`,
+      margin: `15px 0px`,
       color: `var(--el-text-color-regular)`,
     },
 
@@ -172,7 +181,7 @@ const cleanTheme: Theme = {
 
     // 字体加粗样式
     strong: {
-      'color': `var(--md-primary-color)`,
+      // 'color': `var(--md-primary-color)`,
       'font-weight': `bold`,
       'font-size': `inherit`,
     },
@@ -189,16 +198,21 @@ const cleanTheme: Theme = {
     },
 
     thead: {
-      'background': `rgba(0, 0, 0, 0.05)`,
+      // 'background': `rgba(0, 0, 0, 0.05)`,
+      // 'color': `var(--el-text-color-regular)`,
+
       'font-weight': `bold`,
-      'color': `var(--el-text-color-regular)`,
+      'padding': `0.5rem 1rem`,
+      'border': `1px solid #e9ebec`,
     },
 
     td: {
       'border': `1px solid #dfdfdf`,
-      'padding': `0.25em 0.5em`,
+      // 'padding': `0.25em 0.5em`,
       'color': `#3f3f3f`,
       'word-break': `keep-all`,
+      // 'padding': `0.5rem 1rem`,
+      // 'border': `1px solid #e9ebec`,
     },
 
     footnote: {
