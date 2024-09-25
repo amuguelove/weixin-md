@@ -6,14 +6,12 @@ const cleanTheme: Theme = {
   base: {
     '--md-primary-color': `#000000`,
     'text-align': `left`,
-    'line-height': `1.35`,
+    'line-height': `1.75`,
   },
   block: {
     // 一级标题
     h1: {
-      // 'margin': `1.2em auto 0.75em`,
-      'margin-top': `2rem`,
-      'margin-bottom': `0.5rem`,
+      'margin': `32px 0 8px`,
       'color': `var(--md-primary-color)`,
       'font-size': `1.5em`,
       'font-weight': `700`,
@@ -22,9 +20,7 @@ const cleanTheme: Theme = {
 
     // 二级标题
     h2: {
-      // 'margin': `1.2em auto 0.75em`,
-      'margin-top': `2rem`,
-      'margin-bottom': `0.5rem`,
+      'margin': `32px 0 8px`,
       'color': `var(--md-primary-color)`,
       'font-size': `1.4em`,
       'font-weight': `700`,
@@ -35,9 +31,7 @@ const cleanTheme: Theme = {
     h3: {
       // 'padding-left': `8px`,
       // 'border-left': `3px solid var(--md-primary-color)`,
-      // 'margin': `1.2em auto 0.5em`,
-      'margin-top': `2rem`,
-      'margin-bottom': `0.5rem`,
+      'margin': `32px 0 8px`,
       'color': `var(--md-primary-color)`,
       'font-size': `1.3em`,
       'font-weight': `700`,
@@ -48,9 +42,7 @@ const cleanTheme: Theme = {
     h4: {
       // 'padding-left': `8px`,
       // 'border-left': `3px solid var(--md-primary-color)`,
-      // 'margin': `1.2em auto 0.5em`,
-      'margin-top': `2rem`,
-      'margin-bottom': `0.5rem`,
+      'margin': `32px 0 8px`,
       'color': `var(--el-text-color-regular)`,
       'font-size': `1.2em`,
       'font-weight': `700`,
@@ -67,7 +59,7 @@ const cleanTheme: Theme = {
 
     // 引用
     blockquote: {
-      'padding': `15px 1rem`,
+      'padding': `15px 15px`,
       'font-size': `14px`,
       'line-height': `18px`,
       'color': `#819198`,
@@ -91,15 +83,15 @@ const cleanTheme: Theme = {
       'overflow-x': `auto`,
       'border-radius': `4px`,
       'padding': `0.5em`,
-      'line-height': `1.5`,
       'margin': `10px 2px`,
       'box-shadow': `inset 0 0 10px rgba(0,0,0,0.05)`,
     },
 
     // 行内代码
     code: {
-      'margin': 0,
+      'margin': `0`,
       'white-space': `nowrap`,
+      'line-height': `1.2`,
       'font-family': `Menlo, Operator Mono, Consolas, Monaco, monospace`,
     },
 
@@ -150,9 +142,9 @@ const cleanTheme: Theme = {
   inline: {
     listitem: {
       // 'text-indent': `-1em`,
-      display: `list-item`,
-      // 'margin': `0.2em 2px`,
-      color: `var(--el-text-color-regular)`,
+      'display': `list-item`,
+      'margin': `6px 2px`,
+      'color': `var(--el-text-color-regular)`,
     },
 
     codespan: {

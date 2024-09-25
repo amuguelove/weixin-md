@@ -20,8 +20,7 @@ export function customizeTheme(theme, options) {
       newTheme.block[`h${i}`][`font-size`] = `${fontSize * Number.parseFloat(v)}px`
     }
   }
-  newTheme.block.code_pre[`font-size`] = `13px`
-  newTheme.block.code[`font-size`] = `13px`
+  newTheme.block.code[`font-size`] = `12.5px`
   newTheme.block.ul[`list-style-type`] = `square !important`
   if (color) {
     newTheme.base[`--md-primary-color`] = color
